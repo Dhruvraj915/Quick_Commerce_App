@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_120sdp"
-    android:layout_height="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="@dimen/_3sdp"
-    app:cardCornerRadius="@dimen/_5sdp"
-    android:layout_marginHorizontal="@dimen/_5sdp"
-    android:layout_marginVertical="@dimen/_5sdp">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- This Space pushes the CardView down -->
+    <Space
         android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_120sdp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/_5sdp">
+        app:cardElevation="@dimen/_3sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp">
 
-        <ImageView
-            android:id="@+id/custom_category_image"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp" />
-
-        <TextView
-            android:maxLines="2"
-            android:minLines="2"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/custom_category_name"
-            style="@style/text_13"
-            android:layout_marginTop="@dimen/_5sdp" />
+            android:padding="@dimen/_5sdp">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/custom_category_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_launcher_foreground" /> <!-- example image -->
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/custom_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:minLines="2"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/text_13"
+                android:text="Sample Category" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
